@@ -1,0 +1,34 @@
+//setblendcfg
+cleos --url https://wax.pink.gg push action freecitygamx setblendcfg '{"template_id":369713, "name": "Home NFT Card","require_template_ids":[350618,350618,350618,350618,350618]}' -p freecitygamx@active
+
+//rmblendcfg
+cleos --url https://wax.pink.gg push action freecitygamx rmblendcfg '{"template_id":339677}' -p freecitygamx@active
+
+//set eosio.code permission
+cleos --url https://wax.pink.gg set account permission freecitygamx active --add-code
+
+//buyram
+cleos -u https://wax.pink.gg system buyram mytestacct22 mytestacct22 "200 WAX" -p mytestacct22@active
+
+//set config
+cleos --url https://wax.greymass.com push action freecitygamx setconfig '["0.01000000 RMX",86400,[350618,350619,350620,350699,350700,369713,369718]]' -p freecitygamx@active
+
+//clear config
+cleos --url https://wax.greymass.com push action freecitygamx clearconfig '[]' -p freecitygamx@active
+
+//remove user
+cleos --url https://wax.greymass.com push action freecitygamx rmuser '["kkere.wam"]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmuser '["remixplayer1"]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmuser '["yxgrc.wam"]' -p freecitygamx@active;
+
+//remove staking
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577516643]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577523113]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577523117]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577523118]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577523147]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577523148]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577571040]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099577571153]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099653768191]' -p freecitygamx@active;
+cleos --url https://wax.greymass.com push action freecitygamx rmnftstake '[1099653785195]' -p freecitygamx@active;

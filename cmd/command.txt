@@ -1,0 +1,34 @@
+//setblendcfg
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 setblendcfg '{"template_id":339677, "name": "Blended Card","require_template_ids":[339676,339676,339676,339676,339676]}' -p freectg11111@active
+
+//rmblendcfg
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmblendcfg '{"template_id":339677}' -p freectg11111@active
+
+//blend transfer
+cleos --url https://testnet.wax.eosdetroit.io push action atomicassets transfer '["mytestacct11", "freectg11111", [1099526477789,1099526477790,1099526477791,1099526477792,1099526477793], "339677"]' -p mytestacct11@active
+
+//set eosio.code permission
+cleos --url https://testnet.wax.eosdetroit.io set account permission freectg11111 active --add-code
+
+//buyram
+cleos -u https://waxtestnet.greymass.com system buyram mytestacct22 mytestacct22 "200 WAX" -p mytestacct22@active
+
+//set config
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 setconfig '["0.0100 RMW",30,[339676,342405,396514]]' -p freectg11111@active
+
+//clear config
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 clearconfig '[]' -p freectg11111@active
+
+//transfer stake
+cleos --url https://testnet.wax.eosdetroit.io push action atomicassets transfer '["mytestacct11", "freectg11111", [1099527217032,1099528480420], "stake"]' -p mytestacct11@active
+cleos --url https://testnet.wax.eosdetroit.io push action atomicassets transfer '["mytestacct11", "freectg11111", [1099528480419], "stake"]' -p mytestacct11@active
+
+//claim stake
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 claimstake '["mytestacct11"]' -p mytestacct11@active
+
+//remove user
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmuser '["mytestacct11"]' -p freectg11111@active
+
+//remove staking
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099527217032]' -p freectg11111@active
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099528480420]' -p freectg11111@active
