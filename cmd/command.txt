@@ -25,10 +25,21 @@ cleos --url https://testnet.wax.eosdetroit.io push action atomicassets transfer 
 
 //claim stake
 cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 claimstake '["mytestacct11"]' -p mytestacct11@active
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 claimstake '["mytestacct22"]' -p mytestacct22@active
+
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 claimstake '["mytestacct11"]' -p mytestacct11@active
 
 //remove user
-cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmuser '["mytestacct11"]' -p freectg11111@active
+cleos --url https://testnet.wax.eosdetroit.io push action freecitytkn1 issue '["mytestacct11", "2.0100 RMW", ""]' -p mytestacct11@active
 
 //remove staking
-cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099527217032]' -p freectg11111@active
-cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099528480420]' -p freectg11111@active
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099527217032]' -p freectg11111@active;
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099528480420]' -p freectg11111@active;
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 rmnftstake '[1099528480419]' -p freectg11111@active;
+
+//withdraw
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 wthtoken '["mytestacct11", "0.0001 RMW"]' -p mytestacct11@active
+
+//unstake
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 unstknft '["mytestacct22"]' -p mytestacct22@active
+cleos --url https://testnet.wax.eosdetroit.io push action freectg11111 unstknft '["mytestacct11"]' -p mytestacct11@active
