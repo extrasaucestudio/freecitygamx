@@ -54,6 +54,7 @@ public:
    ACTION rmnftstake(uint64_t asset_id);
    ACTION wthtoken(name wallet, asset quantity);
    ACTION unstknft(name wallet);
+   ACTION adduseraff(name wallet, name affiliate_wallet);
    
 private:
    
